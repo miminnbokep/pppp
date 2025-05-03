@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - Gurita Store</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e3f2fd, #ffffff);
+      color: #333;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar-right {
+      background-color: #333;
+      color: #fff;
+      width: 150px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar-right h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+      .sidebar-right ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+
+      .sidebar-right ul li {
+        margin-bottom: 15px;
+      }
+
+      .sidebar-right ul li a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        text-align: center;
+      }
+
+      .sidebar-right ul li a:hover,
+      .sidebar-right ul li a.active {
+        background-color: #0288d1;
+      }
+
+      .sidebar-right footer {
+        margin-top: auto;
+        padding-top: 20px;
+        font-size: 0.9em;
+        text-align: center;
+      }
+
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      position: relative;
+    }
+
+    header {
+      background-color: #2196f3;
+      color: white;
+      padding: 1em 0;
+      text-align: center;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .hero {
+      background-color: #e3f2fd;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h2 {
+      margin: 0 0 10px;
+      font-size: 2em;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1.2s ease;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .mobile-tab-button {
+      display: none;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+    }
+
+    .hidden-tab {
+      display: none;
+      background-color: #ddd;
+      padding: 15px;
+      margin-top: 60px;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .hidden-tab ul {
+        list-style: none;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+
+    }
+
+    .hidden-tab ul li {
+        margin-bottom: 15px;
+
+    }
+
+    .hidden-tab ul li a {
+        display: block;
+          color: #fff;
+          text-decoration: none;
+          padding: 10px 15px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+          text-align: center;
+
+    }
+
+      .hidden-tab ul li a:hover,
+      .hidden-tab ul li a.active {
+        background-color: #0288d1;
+      }
+
+      .hidden-tab footer {
+        margin-top: auto;
+        padding-top: 20px;
+        font-size: 0.9em;
+        text-align: center;
+      }
+
+    @media (max-width: 600px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar-right {
+        display: none;
+      }
+
+      .mobile-tab-button {
+        display: block;
+      }
+
+      .hidden-tab {
+        display: none;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      color: white;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <header>
+      <h1>Tentang Kami - Gurita Store</h1>
+      <button class="mobile-tab-button" onclick="toggleTab()">=</button>
+    </header>
+
+    <div class="hero">
+      <h2>Mengenal Gurita Store Lebih Dekat</h2>
+      <p>Pelajari lebih lanjut tentang siapa kami, apa yang kami lakukan, dan bagaimana kami berkomitmen pada kualitas dan layanan terbaik.</p>
+    </div>
+
+    <div class="hidden-tab" id="mobileNav">
+      <h2>Navigasi</h2>
+      <ul>
+        <li><a href="/">Beranda</a></li>
+        <li><a href="tentang" class="active">Tentang</a></li>
+        <li><a href="layanan">Layanan</a></li>
+        <li><a href="kontak">Kontak</a></li>
+        <li><a href="#"><b>API</b></a></li>
+      </ul>
+      <footer>
+        <p>&copy; 2025 Gurita Darat</p>
+      </footer>
+    </div>
+
+    <div class="container">
+      <section>
+        <h2>Visi Kami</h2>
+        <p>Kami bertujuan untuk menjadi penyedia solusi digital terdepan yang memudahkan integrasi layanan API dan teknologi lainnya untuk berbagai kebutuhan.</p>
+
+        <h2>Misi Kami</h2>
+        <p>Memberikan layanan API berkualitas tinggi, mudah digunakan, dan efisien yang membantu pelanggan kami tumbuh dan sukses di era digital.</p>
+
+        <h2>Tim Kami</h2>
+        <p>Kami adalah tim profesional yang berpengalaman dalam teknologi dan pengembangan perangkat lunak, berkomitmen untuk memberikan yang terbaik bagi pengguna kami.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="sidebar-right">
+    <h2>Navigasi</h2>
+    <ul>
+      <li><a href="/">Beranda</a></li>
+        <li><a href="#" class="active"><b>Tentang</b></a></li>
+      <li><a href="layanan">Layanan</a></li>
+      <li><a href="kontak">Kontak</a></li>
+       <li><a href="tentang">API</a></li>
+    </ul>
+    <footer>
+      <p>&copy; 2025 Gurita Darat</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleTab() {
+      var x = document.getElementById("mobileNav");
+      x.style.display = (x.style.display === "none" || x.style.display === "") ? "block" : "none";
+    }
+  </script>
+</body>
+</html>

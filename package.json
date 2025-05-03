@@ -1,0 +1,28 @@
+{
+  "name": "gurorkut",
+  "version": "1.0.0",
+  "description": "api orkut",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "orkut"
+  ],
+  "author": "gurita",
+  "license": "ISC",
+  "dependencies": {
+    "@vreden/youtube_scraper": "^1.2.7",
+    "axios": "^1.8.4",
+    "body-parser": "^2.2.0",
+    "btch-downloader": "^3.7.21",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^5.1.0",
+    "form-data": "^4.0.2",
+    "fs": "^0.0.1-security",
+    "node-telegram-bot-api": "^0.66.0",
+    "node-upload-images": "^1.0.1",
+    "qrcode": "^1.5.4"
+  }
+}
