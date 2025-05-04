@@ -1,7 +1,7 @@
 require('./settings.js')
 const express = require('express');
 const app = express();
-const port = process.env.SERVER_PORT || 443
+const port = process.env.SERVER_PORT || 3000
 const cors = require('cors');
 const axios = require('axios');
 const getBuffer = async (url, options) => {
